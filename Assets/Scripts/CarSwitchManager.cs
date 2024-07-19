@@ -5,11 +5,15 @@ using UnityEngine;
 public class CarSwitchManager : MonoBehaviour
 {
     [SerializeField]
-    Switcher switcher;
+    Switcher startingCar;
+
+    Switcher[] allSwitchers;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startingCar.Switch(true);
+        //I know that find is expensive
+        allSwitchers = Component.FindObjectsOfType<Switcher>();
     }
 
     // Update is called once per frame
@@ -24,9 +28,9 @@ public class CarSwitchManager : MonoBehaviour
                 Debug.Log(hit.transform.name);
                 if(hit.transform.tag=="Car")
                 {
-                    switcher.Switch(false);
-                    switcher = hit.transform.GetComponent<Switcher>();
-                    switcher.Switch(true);
+                    startingCar.Switch(false);
+                    startingCar = hit.transform.GetComponent<Switcher>();
+                    startingCar.Switch(true);
                 }
             }
         }

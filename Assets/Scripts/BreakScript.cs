@@ -5,27 +5,32 @@ using UnityEngine;
 public class BreakScript : MonoBehaviour
 {
     bool isBreaking=true;
-    Vector3 breakPos;
     Rigidbody rb;
     [SerializeField]
     float strength;
+    [SerializeField]
+    Transform[] wheels = new Transform[4];
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        breakPos=transform.position;
     }
     public void Break(bool x)
     {
         isBreaking = x;
-        if (isBreaking) breakPos=transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isBreaking)
         {
-            rb.AddForce((breakPos-transform.position)* strength);
+            foreach (Transform wheel in wheels)
+            {
+                Vector3 wheelVelocity = rb.GetPointVelocity(wheel.position);
+                Vector3 mitigationForce = new Vector3(wheelVelocity.x, 0, wheelVelocity.z);
+
+                rb.AddForceAtPosition(-mitigationForce*strength, wheel.position);
+            }
         }
     }
 }

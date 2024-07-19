@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: 7752750358378236709}
   - component: {fileID: 8216056108846824781}
   - component: {fileID: 2033585296986703438}
+  - component: {fileID: 3390013157579759585}
   m_Layer: 0
   m_Name: Car
   m_TagString: Car
@@ -464,8 +465,8 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
+  m_ImplicitCom: 0
+  m_ImplicitTensor: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -546,7 +547,7 @@ MonoBehaviour:
   - {fileID: 2604847047459978238}
   - {fileID: 4209307605561098997}
   suspensionTargetLength: 1
-  suspensionStrength: 5
+  suspensionStrength: 10
   suspensionDamper: 1
   grip: 0.95
 --- !u!114 &586168856702494860
@@ -600,6 +601,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 0.5
+  wheels:
+  - {fileID: 2009732690777450150}
+  - {fileID: 1361162281701110657}
+  - {fileID: 2604847047459978238}
+  - {fileID: 4209307605561098997}
 --- !u!65 &2033585296986703438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -619,8 +625,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.5, z: 3}
+  m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!114 &3390013157579759585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101403179842232488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34ccd1b1bae0d8449816e3992b38ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 0.005
 --- !u!1 &6566166353655436069
 GameObject:
   m_ObjectHideFlags: 0
