@@ -12,8 +12,6 @@ public class AccelerationHandler : MonoBehaviour
     AnimationCurve enginePowerCurve=new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 1));
     [SerializeField]
     float speed=1;
-    [SerializeField]
-    float drag=.6f;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -35,9 +33,6 @@ public class AccelerationHandler : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            rb.AddForce(-rb.velocity * drag);
-        }
+
     }
 }

@@ -10,6 +10,8 @@ public class WheelsVFX : MonoBehaviour
     float wheelRadius=.5f;
     [SerializeField]
     Transform[] wheels= new Transform[4];
+    [SerializeField]
+    bool spinWheels;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,10 @@ public class WheelsVFX : MonoBehaviour
             {
                 wheel.position = new Vector3(0, -suspensionLength+ wheelRadius, 0)+wheel.parent.position;
             }
-            wheel.Rotate(new Vector3(Vector3.Dot(wheel.parent.forward, rb.GetPointVelocity(wheel.parent.position)) / (2 * Mathf.PI * wheelRadius), 0,0));
+            if (spinWheels)
+            {
+                wheel.Rotate(new Vector3(Vector3.Dot(wheel.parent.forward, rb.GetPointVelocity(wheel.parent.position)) / (2 * Mathf.PI * wheelRadius), 0,0));
+            }
         }
     }
 }
