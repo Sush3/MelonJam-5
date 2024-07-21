@@ -790,6 +790,7 @@ GameObject:
   - component: {fileID: -8107046436432637477}
   - component: {fileID: 467738799131639345}
   - component: {fileID: 3265789590001637417}
+  - component: {fileID: -7950095004206145464}
   m_Layer: 3
   m_Name: Car
   m_TagString: Car
@@ -1093,7 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angleThreshold: 75
-  YValueThreshold: 8
+  YValueThreshold: 9
 --- !u!114 &467738799131639345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,6 +1110,7 @@ MonoBehaviour:
   increment: 0.3
   multiply: 0.1
   audioName: JeepEngine
+  startVolume: 1
 --- !u!59 &3265789590001637417
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -1148,6 +1150,19 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &-7950095004206145464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101403179842232488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d3b0fff272440419544468b298b38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 30
 --- !u!1 &6566166353655436069
 GameObject:
   m_ObjectHideFlags: 0

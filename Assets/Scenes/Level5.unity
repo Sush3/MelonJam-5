@@ -3280,6 +3280,8 @@ GameObject:
   - component: {fileID: 713618482}
   - component: {fileID: 713618483}
   - component: {fileID: 713618484}
+  - component: {fileID: 713618485}
+  - component: {fileID: 713618486}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3325,6 +3327,74 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf8cd51193e5d3746836bcec9e4bb5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &713618485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713618481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ad11784877f4445b5b4ea5e3941878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24300002, guid: c6db3b470791d974fb9b60f2e3e3ffc3, type: 2}
+  sounds:
+  - name: Soundtrack
+    clip: {fileID: 8300000, guid: a97170805c4e6e84782671fc715b218a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    Scource: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 0cd7478efb15967448a9a29eba931865, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    Scource: {fileID: 0}
+  - name: JeepEngine
+    clip: {fileID: 8300000, guid: 241dbdfafbbe6314ab328fda36d433a0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    Scource: {fileID: 0}
+  - name: CarSwitch
+    clip: {fileID: 8300000, guid: dda17cc23ad8f604786547c17c9c0c4a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    Scource: {fileID: 0}
+  - name: Rewind
+    clip: {fileID: 8300000, guid: 1f2df167579b3694f9edbfc78204ecc6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    Scource: {fileID: 0}
+  - name: BusEngine
+    clip: {fileID: 8300000, guid: eb90236d611b0b6498b2a968be9d0a31, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    Scource: {fileID: 0}
+  - name: MonsterEngine
+    clip: {fileID: 8300000, guid: 37efcde241ebc7a44a0e8bf1a4c39296, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    Scource: {fileID: 0}
+--- !u!114 &713618486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713618481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9182aa8ac6e36488e91004658bbf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &727178567
@@ -5821,7 +5891,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304496365}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -6026,7 +6096,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308776057}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -8151,12 +8221,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783103328}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b51c6cf2062796a4294456b42adb4c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneIndex: 2
+  nextSceneIndex: 0
   trailer: {fileID: 18119782}
   winDist: 20
 --- !u!1001 &1785953171
@@ -10233,6 +10303,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 512410462990595331, guid: 7a64a5d0d1a9ae24fa6ebcf20e6052cd,
+        type: 3}
+      propertyPath: pointTo
+      value: 
+      objectReference: {fileID: 1783103332}
     - target: {fileID: 527689164016090733, guid: 7a64a5d0d1a9ae24fa6ebcf20e6052cd,
         type: 3}
       propertyPath: m_Layer

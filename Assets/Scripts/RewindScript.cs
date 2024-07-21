@@ -67,4 +67,9 @@ public class RewindScript : MonoBehaviour
         currentPositionNode = transform.position;
         currentRotationNode = transform.rotation;
     }
+    public void Clear()
+    {
+        savedPositions.Clear();
+        savedRotations.Clear();
+    }
 }

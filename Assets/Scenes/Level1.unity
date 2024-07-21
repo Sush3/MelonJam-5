@@ -758,8 +758,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.20738703, y: 0.49396285, z: -0.122602046, w: -0.8354401}
-  m_LocalPosition: {x: 310.483, y: 53.493713, z: 84.020874}
+  m_LocalRotation: {x: -0.207387, y: 0.4939629, z: -0.122602, w: -0.8354401}
+  m_LocalPosition: {x: 310.483, y: 53.49371, z: 84.02087}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1435,6 +1435,7 @@ GameObject:
   - component: {fileID: 713618482}
   - component: {fileID: 713618483}
   - component: {fileID: 713618484}
+  - component: {fileID: 713618486}
   - component: {fileID: 713618485}
   m_Layer: 0
   m_Name: GameManager
@@ -1527,18 +1528,30 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     Scource: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
+  - name: BusEngine
+    clip: {fileID: 8300000, guid: eb90236d611b0b6498b2a968be9d0a31, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
     Scource: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
+  - name: MonsterEngine
+    clip: {fileID: 8300000, guid: 37efcde241ebc7a44a0e8bf1a4c39296, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
     Scource: {fileID: 0}
+--- !u!114 &713618486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713618481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9182aa8ac6e36488e91004658bbf8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &752929202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,6 +3059,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8107046436432637477, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
+        type: 3}
+      propertyPath: YValueThreshold
+      value: 8.5
+      objectReference: {fileID: 0}
     - target: {fileID: 322813683371348304, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
         type: 3}
       propertyPath: m_Layer
@@ -3059,17 +3077,17 @@ PrefabInstance:
     - target: {fileID: 425968440917613103, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.0199995
+      value: 14.02
       objectReference: {fileID: 0}
     - target: {fileID: 425968440917613103, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 200.51001
+      value: 200.51
       objectReference: {fileID: 0}
     - target: {fileID: 425968440917613103, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.25882143
+      value: 0.2588214
       objectReference: {fileID: 0}
     - target: {fileID: 425968440917613103, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
         type: 3}
@@ -3106,6 +3124,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 467738799131639345, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
+        type: 3}
+      propertyPath: audioName
+      value: MonsterEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1253662403321102312, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
         type: 3}
       propertyPath: m_Layer
@@ -3121,6 +3144,21 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 18119789}
+    - target: {fileID: 3265789590001637417, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.000002026558
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265789590001637417, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265789590001637417, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 2.5000129
+      objectReference: {fileID: 0}
     - target: {fileID: 4007408004600014422, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
         type: 3}
       propertyPath: m_Layer
@@ -3209,6 +3247,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 512410462990595331, guid: 7a64a5d0d1a9ae24fa6ebcf20e6052cd,
+        type: 3}
+      propertyPath: pointTo
+      value: 
+      objectReference: {fileID: 1783103332}
     - target: {fileID: 527689164016090733, guid: 7a64a5d0d1a9ae24fa6ebcf20e6052cd,
         type: 3}
       propertyPath: m_Layer

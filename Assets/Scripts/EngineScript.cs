@@ -25,7 +25,6 @@ public class EngineScript : MonoBehaviour
     void Update()
     {
         AudioManager.Instance.ChangePitch(audioName, rb.velocity.magnitude* multiply+increment);
-
     }
     private void OnEnable()
     {
