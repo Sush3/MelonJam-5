@@ -19,6 +19,7 @@ public class FallOverRewindScript : MonoBehaviour
     {
         if (Vector3.Angle(transform.up,Vector3.up)>angleThreshold||transform.position.y<YValueThreshold)
         {
+            Debug.Log(gameObject.name + Vector3.Angle(transform.up, Vector3.up));
             StartCoroutine(RewindAll());
         }
     }

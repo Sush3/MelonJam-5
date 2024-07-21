@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class FlagScript : MonoBehaviour
 {
+    [SerializeField]
+    int nextSceneIndex;
     [SerializeField]
     Transform trailer;
     [SerializeField]
@@ -11,7 +14,6 @@ public class FlagScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -19,7 +21,7 @@ public class FlagScript : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, trailer.position) < winDist)
         {
-            Debug.Log("WIN");
+            SceneManager.LoadScene(nextSceneIndex);
         }
     }
 }
