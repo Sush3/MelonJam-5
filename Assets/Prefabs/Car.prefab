@@ -788,6 +788,7 @@ GameObject:
   - component: {fileID: 7408203814403511271}
   - component: {fileID: 3560931409267457610}
   - component: {fileID: -8107046436432637477}
+  - component: {fileID: 467738799131639345}
   - component: {fileID: 3265789590001637417}
   m_Layer: 3
   m_Name: Car
@@ -976,8 +977,8 @@ MonoBehaviour:
   - {fileID: 1361162281701110657}
   invertSteering: 0000
   maxAngle: 45
-  steerSpeed: 100
-  getToNeutralStrength: 50
+  steerSpeed: 50
+  getToNeutralStrength: 130
 --- !u!114 &7752750358378236709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,6 +1094,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angleThreshold: 75
   YValueThreshold: 8
+--- !u!114 &467738799131639345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101403179842232488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6517c10c86a08646a98745de48a73c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.3
+  multiply: 0.1
+  audioName: JeepEngine
 --- !u!59 &3265789590001637417
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -1189,8 +1205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8168205041242669546}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03953636, y: -0.9448677, z: 0.3003142, w: -0.1243919}
-  m_LocalPosition: {x: -3.660188, y: 10, z: 13.66027}
+  m_LocalRotation: {x: 0.3003141, y: -0.12439184, z: 0.039536357, w: 0.94486773}
+  m_LocalPosition: {x: 3.6601877, y: 10.000002, z: -13.660274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

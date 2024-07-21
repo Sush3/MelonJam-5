@@ -1435,6 +1435,7 @@ GameObject:
   - component: {fileID: 713618482}
   - component: {fileID: 713618483}
   - component: {fileID: 713618484}
+  - component: {fileID: 713618485}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1482,6 +1483,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8cd51193e5d3746836bcec9e4bb5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &713618485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713618481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ad11784877f4445b5b4ea5e3941878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24300002, guid: c6db3b470791d974fb9b60f2e3e3ffc3, type: 2}
+  sounds:
+  - name: Soundtrack
+    clip: {fileID: 8300000, guid: a97170805c4e6e84782671fc715b218a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    Scource: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 0cd7478efb15967448a9a29eba931865, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    Scource: {fileID: 0}
+  - name: JeepEngine
+    clip: {fileID: 8300000, guid: 241dbdfafbbe6314ab328fda36d433a0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    Scource: {fileID: 0}
+  - name: CarSwitch
+    clip: {fileID: 8300000, guid: 1f2df167579b3694f9edbfc78204ecc6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    Scource: {fileID: 0}
+  - name: Rewind
+    clip: {fileID: 8300000, guid: 1f2df167579b3694f9edbfc78204ecc6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    Scource: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    Scource: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    Scource: {fileID: 0}
 --- !u!1 &752929202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033585296986703438, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.579824
       objectReference: {fileID: 0}
     - target: {fileID: 3265789590001637417, guid: 2d3cc3c595173834dbfe2825f6a06eaa,
         type: 3}

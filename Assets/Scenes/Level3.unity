@@ -4931,7 +4931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51c6cf2062796a4294456b42adb4c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneIndex: 2
+  nextSceneIndex: 3
   trailer: {fileID: 18119782}
   winDist: 20
 --- !u!1001 &1812980383

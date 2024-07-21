@@ -21,6 +21,10 @@ public class RewindManager : MonoBehaviour
     }
     public void RewindAll()
     {
+        if (!AudioManager.Instance.IsPlaying("Rewind"))
+        {
+            AudioManager.Instance.Play("Rewind");   
+        }
         foreach (var rewindScript in allRewindScripts)
         {
             rewindScript.Rewind();

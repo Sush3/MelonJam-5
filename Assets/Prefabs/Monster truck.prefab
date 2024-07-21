@@ -985,8 +985,8 @@ MonoBehaviour:
   - {fileID: 144821168657653887}
   invertSteering: 00000101
   maxAngle: 30
-  steerSpeed: 100
-  getToNeutralStrength: 50
+  steerSpeed: 50
+  getToNeutralStrength: 130
 --- !u!114 &824014555635837688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,12 +1019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0402bc1781f9f3e468e7b67bfc30c585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 0.5
-  wheels:
-  - {fileID: 144821168657653887}
-  - {fileID: 747517107766175902}
-  - {fileID: 723063030559376067}
-  - {fileID: 4932350100676291328}
   breakDrag: 5
 --- !u!114 &7932163229706791038
 MonoBehaviour:

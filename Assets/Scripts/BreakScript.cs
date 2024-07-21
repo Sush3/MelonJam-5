@@ -13,7 +13,6 @@ public class BreakScript : MonoBehaviour
     }
     public void Break(bool x)
     {
-        Debug.Log("a");
         rb.drag = x?breakDrag:1;
         if (GetComponent<HingeJoint>())
         {

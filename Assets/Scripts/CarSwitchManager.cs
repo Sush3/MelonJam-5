@@ -22,8 +22,9 @@ public class CarSwitchManager : MonoBehaviour
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),out hit, 1000, LayerMask.GetMask("Cars")))
             {
                 Debug.Log(hit.transform.name);
-                if(hit.transform.tag=="Car")
+                if(hit.transform.tag=="Car"&& hit.transform.GetComponent<Switcher>()!= currentSwitcher)
                 {
+                    AudioManager.Instance.Play("CarSwitch");
                     currentSwitcher.Switch(false);
                     currentSwitcher = hit.transform.GetComponent<Switcher>();
                     currentSwitcher.Switch(true);

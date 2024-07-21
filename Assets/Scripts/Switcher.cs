@@ -8,6 +8,7 @@ public class Switcher : MonoBehaviour
     AccelerationHandler ah;
     SteerScript ss;
     BreakScript bs;
+    EngineScript es;
     [SerializeField]
     CinemachineVirtualCamera cam;
 
@@ -16,6 +17,7 @@ public class Switcher : MonoBehaviour
         ah=GetComponent<AccelerationHandler>();
         ss=GetComponent<SteerScript>();
         bs=GetComponent<BreakScript>();
+        es=GetComponent<EngineScript>();
         Switch(false);
     }
 
@@ -23,6 +25,7 @@ public class Switcher : MonoBehaviour
     {
         ah.enabled = x;
         ss.enabled = x;
+        es.enabled = x;
         bs.Break(!x);
         cam.Priority = x?1:0;
     }
